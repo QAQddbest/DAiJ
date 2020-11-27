@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class BubbleSortTest {
+class QuickSortRTest {
 
-    Sort sort = new BubbleSort();
+    Sort sort = new QuickSortR();
 
     @Test
     void normalTest() {
@@ -18,9 +18,9 @@ class BubbleSortTest {
 
     @Test
     void sameTest() {
-        Integer[] array = new Integer[]{1, 1, 2, 2, 2, 1, 1, 3, 3, 3};
+        Integer[] array = new Integer[]{1, 1};
         sort.sort(array);
-        assertArrayEquals(new Integer[]{1, 1, 1, 1, 2, 2, 2, 3, 3, 3,}, array);
+        assertArrayEquals(new Integer[]{1, 1}, array);
     }
 
     @Test

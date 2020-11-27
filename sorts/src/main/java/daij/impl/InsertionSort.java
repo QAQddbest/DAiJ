@@ -27,9 +27,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class InsertionSort implements Sort {
     /**
-     * Sorts the specified array into ascending numerical order.
-     *
-     * @param array the array to be sorted
+     * {@inheritDoc}
      */
     @Override
     public <T extends Comparable<T>> void sort(@NotNull T[] array) {
