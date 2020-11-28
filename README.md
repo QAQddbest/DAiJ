@@ -26,7 +26,28 @@ In the meanwhile, code's efficiency and concise are guaranteed, as well as the s
 
 ## Contribution
 
-:cry:Maybe I will add this part later.
+### Add feature
+
+#### New module
+
+When you want to add something branch new, you can add a new folder and make it a submodule in the root directory of the project.
+
+Two steps are needed:
+1. create a new folder with `build.gradle.kts` file(DAiJ use kotlin dsl instead of groovy for gradle) and `src` folder in java way.
+2. add the module name into [`settings.gradle.kts`](./settings.gradle.kts) file.
+
+> As for `build.gradle.kts`, you would better directly copy Example of `build.gradle.kts` below to it.
+
+#### Existing module
+
+After adding or modifying any code, test cases in junit5 are required.
+
+In the meanwhile, `@NotNull` and `@NullAble` label are also wanted, which helps making the code get rid of NullPointerException (Maybe... XD)
+
+### Requirements
+
+* JDK: 1.8
+* Gradle: 6.x
 
 ## Thanks
 
@@ -34,4 +55,33 @@ Thanks to [TheAlgorithms/Java](https://github.com/TheAlgorithms/Java) in github.
 
 I consult it's structure(and only the structure, never the code), and [README.md](https://github.com/TheAlgorithms/Java/blob/master/README.md) file.
 
+## Example of `build.gradle.kts`
+```kotlin
+plugins {
+    java
+}
 
+group = "daij"
+
+version = "1.0.0"
+
+repositories {
+    jcenter()
+}
+
+dependencies { // Do not add any other depency to the project
+    implementation(group = "org.jetbrains", name = "annotations", version = "20.1.0")
+    // Use JUnit Jupiter API for testing.
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+    testImplementation(project(":sorts"))
+}
+
+tasks.test {
+    // Use junit platform for unit tests.
+    useJUnitPlatform()
+}
+```
