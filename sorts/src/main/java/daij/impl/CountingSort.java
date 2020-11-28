@@ -3,6 +3,9 @@ package daij.impl;
 import daij.Sort;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * <ul>
  * <li>Time complexity:
@@ -38,13 +41,8 @@ public class CountingSort implements Sort {
             throw new UnsupportedOperationException("CountingSort only support Integer[] now");
         }
         Integer[] _array = (Integer[]) array;
-        int min = _array[0], max = _array[0];
-        for (int i = _array.length - 1; i > 0; i--) {
-            if (_array[i] < min)
-                min = _array[i];
-            else if (_array[i] > max)
-                max = _array[i];
-        }
+        int min = Arrays.stream(_array).min(Comparator.naturalOrder()).get();
+        int max = Arrays.stream(_array).max(Comparator.naturalOrder()).get();
         int[] occurrence = new int[max - min + 1];
         // counting occurrence
         for (int i = _array.length - 1; i >= 0; i--) {

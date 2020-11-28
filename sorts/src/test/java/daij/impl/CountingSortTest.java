@@ -3,6 +3,9 @@ package daij.impl;
 import daij.Sort;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.Random;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class CountingSortTest {
@@ -50,6 +53,19 @@ class CountingSortTest {
     @Test
     void nullTest() {
         sort.sort(null);
+    }
+
+    @Test
+    void randomTest() {
+        Integer[] array = new Integer[1000];
+        Random random = new Random();
+        for (int i = 0; i < 1000; i++) {
+            array[i] = random.nextInt(100);
+        }
+        Integer[] arrayClone = array.clone();
+        Arrays.sort(arrayClone);
+        sort.sort(array);
+        assertArrayEquals(arrayClone, array);
     }
 
 }

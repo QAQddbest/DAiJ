@@ -85,4 +85,11 @@ class TimerTest {
         long cost = Timer.measure(() -> sort.sort(array));
         System.out.println("heap sort: " + cost);
     }
+
+    @Test
+    void radixSort() {
+        Sort sort = new RadixSort();
+        long cost = Timer.measure(() -> sort.sort(array));
+        System.out.println("radix sort: " + cost);
+    }
 }

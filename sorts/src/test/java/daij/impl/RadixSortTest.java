@@ -8,9 +8,9 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class SelectionSortTest {
+class RadixSortTest {
 
-    Sort sort = new SelectionSort();
+    Sort sort = new RadixSort();
 
     @Test
     void normalTest() {

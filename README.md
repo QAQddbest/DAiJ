@@ -4,7 +4,11 @@
 
 ## Introduction
 
-:+1::tada:Datastructures and Algorithms in Java:+1::tada:
+**Datastructures and Algorithms in Java**
+
+In order to make full use of java, I try my utmost to implement the design patterns and design code structure.
+
+In the meanwhile, code's efficiency and concise are guaranteed, as well as the sufficient notes.
 
 ```
                                
@@ -23,4 +27,11 @@
 ## Contribution
 
 :cry:Maybe I will add this part later.
+
+## Thanks
+
+Thanks to [TheAlgorithms/Java](https://github.com/TheAlgorithms/Java) in github.
+
+I consult it's structure(and only the structure, never the code), and [README.md](https://github.com/TheAlgorithms/Java/blob/master/README.md) file.
+
 
