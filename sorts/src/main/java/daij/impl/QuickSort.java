@@ -48,18 +48,18 @@ public class QuickSort implements Sort {
             int high = stack.pop();
             int low = stack.pop();
             if (low < high) {
-                int lowBp = low;
+                int lowBp = low; // backup two index for recursive
                 int highBp = high;
-                T temp = array[low];
+                T temp = array[low]; // current base element
                 while (low < high) {
-                    while (low < high && array[high].compareTo(temp) >= 0)
+                    while (low < high && array[high].compareTo(temp) >= 0) // find smaller one from right side
                         high--;
                     array[low] = array[high];
-                    while (low < high && array[low].compareTo(temp) <= 0)
+                    while (low < high && array[low].compareTo(temp) <= 0) // find bigger one from left side
                         low++;
                     array[high] = array[low];
                 }
-                array[low] = temp;
+                array[low] = temp; // restore the base element
                 stack.push(lowBp);
                 stack.push(low - 1);
                 stack.push(low + 1);

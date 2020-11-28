@@ -50,18 +50,18 @@ public class QuickSortR implements Sort {
      */
     private <T extends Comparable<T>> void sortImpl(@NotNull T[] array, int low, int high) {
         if (low < high) {
-            int lowBp = low;
+            int lowBp = low; // backup two index for recursive
             int highBp = high;
-            T temp = array[low];
+            T temp = array[low]; // current base element
             while (low < high) {
-                while (low < high && array[high].compareTo(temp) >= 0)
+                while (low < high && array[high].compareTo(temp) >= 0) // find smaller one from right side
                     high--;
                 array[low] = array[high];
-                while (low < high && array[low].compareTo(temp) <= 0)
+                while (low < high && array[low].compareTo(temp) <= 0) // find bigger one from left side
                     low++;
                 array[high] = array[low];
             }
-            array[low] = temp;
+            array[low] = temp; // restore the base element
             sortImpl(array, lowBp, low - 1);
             sortImpl(array, low + 1, highBp);
         }
