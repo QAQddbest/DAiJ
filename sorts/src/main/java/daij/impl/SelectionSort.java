@@ -1,6 +1,7 @@
 package daij.impl;
 
 import daij.Sort;
+import daij.SortUtils;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -42,9 +43,7 @@ public class SelectionSort implements Sort {
                 }
             }
             if (idx != cur) { // swap array[idx] with array[cur] if find a bigger one
-                T temp = array[cur];
-                array[cur] = array[idx];
-                array[idx] = temp;
+                SortUtils.swap(array, cur, idx);
             }
         }
     }

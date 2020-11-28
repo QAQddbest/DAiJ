@@ -1,6 +1,7 @@
 package daij.impl;
 
 import daij.Sort;
+import daij.SortUtils;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -37,9 +38,7 @@ public class BubbleSort implements Sort {
         for (int cur = array.length - 1; cur > 0; cur--) { // sorted array in right side
             for (int j = 0; j < cur; j++) { // from left(unsorted array) to sorted one
                 if (array[j].compareTo(array[j + 1]) > 0) {
-                    T temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    SortUtils.swap(array, j, j + 1);
                 }
             }
         }

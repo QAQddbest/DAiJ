@@ -78,4 +78,11 @@ class TimerTest {
         long cost = Timer.measure(() -> sort.sort(array));
         System.out.println("merge sort: " + cost);
     }
+
+    @Test
+    void heapSort() {
+        Sort sort = new HeapSort();
+        long cost = Timer.measure(() -> sort.sort(array));
+        System.out.println("heap sort: " + cost);
+    }
 }
