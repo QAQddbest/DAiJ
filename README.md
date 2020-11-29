@@ -4,6 +4,8 @@
 
 ## Introduction
 
+:crying:**HELP NEEDED**:crying:
+
 **Datastructures and Algorithms in Java**
 
 In order to make full use of java, I try my utmost to implement the design patterns and design code structure.
@@ -23,6 +25,12 @@ In the meanwhile, code's efficiency and concise are guaranteed, as well as the s
 ```
 
 > Attention: The [DAiJ](https://github.com/QAQddbest/DAiJ) is used for **educational purposes**, which means less efficiency than the standard library and should not directly be used in your works.
+
+## Problems
+
+Now I'm writing `Tree` datastructures, encountering many problems...
+
+I have no idea how to extract the common interface, how to design the structure.
 
 ## Contribution
 
