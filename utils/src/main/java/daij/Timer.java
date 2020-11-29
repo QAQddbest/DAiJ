@@ -30,15 +30,15 @@ public class Timer {
      *
      * <p>Need a function interface parameter, you can call this method with lambda.
      * <p>Example:{@code
-     * long cost = Timer.measure(()->{
+     * long cost = Timer.measure(1000, ()->{
      * // Code need to be measured
-     * }, 1000);}
+     * });}
      *
-     * @param code  the code needed measure
      * @param times the times that should be measure
+     * @param code  the code needed measure
      * @return the cost of the code
      */
-    public static long measure(Runnable code, int times) {
+    public static long measure(int times, Runnable code) {
         long result = 0L;
         for (int i = 0; i < times; i++) {
             long start = System.currentTimeMillis();
