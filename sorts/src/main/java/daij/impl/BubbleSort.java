@@ -8,18 +8,13 @@ import org.jetbrains.annotations.NotNull;
  * <ul>
  * <li>Time complexity:
  * <ul>
- * <li>best: </li>
- * <li>worst: </li>
- * <li>average: </li>
+ * <li>best: o(n^2)</li>
+ * <li>worst: o(n^2)</li>
+ * <li>average: o(n^2)</li>
  * </ul>
  * </li>
- * <li>Space complexity:
- * <ul>
- * <li>best: </li>
- * <li>worst: </li>
- * <li>average: </li>
- * </ul>
- * </li>
+ * <li>Space complexity: o(1)</ul>
+ * <li>Stability: Yes</li>
  * </ul>
  *
  * @author OliverDD

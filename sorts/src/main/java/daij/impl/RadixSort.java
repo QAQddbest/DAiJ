@@ -10,18 +10,13 @@ import java.util.Comparator;
  * <ul>
  * <li>Time complexity:
  * <ul>
- * <li>best: </li>
- * <li>worst: </li>
- * <li>average: </li>
+ * <li>best: o(n*k)</li>
+ * <li>worst: o(n*k)</li>
+ * <li>average: o(n*k)</li>
  * </ul>
  * </li>
- * <li>Space complexity:
- * <ul>
- * <li>best: </li>
- * <li>worst: </li>
- * <li>average: </li>
- * </ul>
- * </li>
+ * <li>Space complexity: o(n+k)</ul>
+ * <li>Stability: Yes</li>
  * </ul>
  *
  * @author OliverDD
