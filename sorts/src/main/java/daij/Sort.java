@@ -32,7 +32,7 @@ public interface Sort {
      * Sorts the specified array into ascending numerical order.
      *
      * @param array the array to be sorted
-     * @param <T>   array's generic type
+     * @param <T>   array's generic type which is comparable
      */
     <T extends Comparable<T>> void sort(@NotNull T[] array);
 
