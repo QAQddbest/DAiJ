@@ -17,5 +17,6 @@ class LeftBoundBinarySearchTest {
         assertEquals(3, binarySearch.search(new Integer[]{1, 3, 4, 5, 5, 5, 7}, 5));
         assertEquals(0, binarySearch.search(new Integer[]{3, 3, 3, 3, 3}, 3));
         assertEquals(1, binarySearch.search(new Integer[]{1, 3, 3, 3}, 3));
+        assertEquals(-1, binarySearch.search(new Integer[]{}, 3));
     }
 }
